@@ -1,0 +1,139 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer utilities {
+  .bg-gradient-to-br {
+    background: linear-gradient(to bottom right, #0f172a, #1e293b, #0a6b9a);
+    height: 100%;
+    width: 100%;
+  }
+
+  .hover\\:shadow-glow:hover {
+    animation: glow 1.5s infinite;
+  }
+}
+
+@keyframes glow {
+  0%, 100% {
+    box-shadow: 0 0 15px rgba(79, 216, 255, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(79, 216, 255, 1);
+  }
+}
+
+
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+
+
+/* Defining the theme colors */
+:root {
+  --primary-bg: #1e2025;  /* Dark background */
+  --secondary-bg: #29343d; /* Slightly lighter background */
+  --primary-text: #ffffff; /* White text */
+  --secondary-text: #92a4b1; /* Light grey for secondary text */
+  --accent-color: #4fd8ff; /* Neon blue accent */
+  --highlight-color: #3bb2e3; /* Bright highlight blue */
+  --button-bg: #64baff; /* Button background */
+  --button-hover-bg: #4fa3d8; /* Button hover background */
+}
+
+/* Global styles */
+body {
+  background-color: var(--primary-bg);
+  color: var(--primary-text);
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Navigation styles */
+nav {
+  background-color: var(--primary-bg);
+  color: var(--primary-text);
+  padding: 2rem;
+}
+
+nav a {
+  color: var(--primary-text);
+  text-decoration: none;
+  margin: 0 1rem;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: var(--highlight-color);
+}
+
+/* Button styles */
+button {
+  background-color: var(--button-bg);
+  color: var(--primary-text);
+  padding: 0.8rem 2rem;
+  border-radius: 1rem;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: var(--button-hover-bg);
+}
+
+/* Card styles */
+.card {
+  background-color: var(--secondary-bg);
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+}
+
+/* Hover effect for links */
+a:hover {
+  color: var(--highlight-color);
+}
+
+/* Customize text colors */
+h1, h2, h3 {
+  color: var(--primary-text);
+}
+
+p {
+  color: var(--secondary-text);
+}
+
+/* Footer styles */
+footer {
+  background-color: var(--secondary-bg);
+  color: var(--primary-text);
+  padding: 1rem;
+  text-align: center;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  /* Example for adjusting the navigation on mobile */
+  nav {
+    padding: 0.5rem;
+  }
+
+  nav a {
+    font-size: 1rem;
+  }
+}
